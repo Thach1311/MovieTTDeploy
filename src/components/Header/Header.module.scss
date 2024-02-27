@@ -1,0 +1,116 @@
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+    z-index: 20;
+}
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    position: absolute;
+    width: 220px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 2px;
+    border-color: rgb(241, 2, 2);
+    border: 2px;
+    background-color: transparent;
+
+    overflow: hidden;
+}
+
+.search_input {
+    height: 20px;
+    width: 200px;
+    background-color: transparent;
+    position: absolute;
+    padding: 5px;
+    font-size: 13px;
+}
+.search_icon {
+    position: relative;
+    margin-left: 180px;
+    font-size: 16px;
+    opacity: 0.5;
+}
+.search_icon:hover {
+    opacity: 1;
+    // scale: 1.3;
+    // transition: all linear 0.5s;
+}
+
+.sun_icon {
+    margin-left: 70%;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        color: #ff8a00;
+        animation: animationIconThemeMoon 2s linear infinite;
+    }
+    display: none;
+}
+.moon_icon {
+    margin-left: 70%;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        
+        color: #5192c7;
+        animation: animationIconThemeMoon 1s linear infinite;
+    }
+}
+
+@keyframes search {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 220px;
+    }
+}
+@keyframes animationIconThemeMoon {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animationIconThemeSun {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header {
+        height: 30px;
+        width: 450px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .logo {
+        font-size: 15px;
+    }
+}
