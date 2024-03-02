@@ -41,7 +41,7 @@ function ListMovie(props) {
                 className={cx('Movie')}
                 style={selectedTheme ? { backgroundColor: 'white' } : { backgroundColor: '#1a1a1a' }}
             >
-                {/* <h1 className={cx('headMovie', 'animate__animated animate__fadeInUp')}>PHIM ĐỀ CỬ</h1> */}
+                 <h1 className={cx('headMovie', 'animate__animated animate__fadeInUp')}>PHIM ĐỀ CỬ</h1> 
 
                 <div className={cx('listMovie')}>
                     {movieData.length > 0 &&
