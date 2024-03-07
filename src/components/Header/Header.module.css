@@ -9,6 +9,7 @@
     position: fixed;
     z-index: 20;
 }
+
 .logo {
     font-size: 30px;
     font-weight: 900;
@@ -29,7 +30,6 @@
     border-color: rgb(241, 2, 2);
     border: 2px;
     background-color: transparent;
-
     overflow: hidden;
 }
 
@@ -41,6 +41,7 @@
     padding: 5px;
     font-size: 13px;
 }
+
 .search_icon {
     position: relative;
     margin-left: 180px;
@@ -52,20 +53,21 @@
     margin-left: 70%;
     font-size: 20px;
     cursor: pointer;
-    &:hover {
-        color: #ff8a00;
-        animation: animationIconThemeMoon 2s linear infinite;
-    }
     display: none;
 }
+.sun_icon:hover {
+    color: #ff8a00;
+    animation: animationIconThemeMoon 2s linear infinite;
+}
+
 .moon_icon {
     margin-left: 70%;
     font-size: 20px;
     cursor: pointer;
-    &:hover {
-        color: #5192c7;
-        animation: animationIconThemeMoon 1s linear infinite;
-    }
+}
+.moon_icon:hover {
+    color: #5192c7;
+    animation: animationIconThemeMoon 1s linear infinite;
 }
 
 @keyframes search {
@@ -87,7 +89,6 @@
         transform: rotate(0deg);
     }
 }
-
 @keyframes animationIconThemeSun {
     0% {
         transform: rotate(0deg);
@@ -96,7 +97,6 @@
         transform: rotate(360deg);
     }
 }
-
 @media screen and (max-width: 450px) {
     .header {
         height: 30px;
@@ -107,4 +107,4 @@
     .logo {
         font-size: 15px;
     }
-}
+} /*# sourceMappingURL=Header.module.css.map */

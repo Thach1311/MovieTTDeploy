@@ -1,0 +1,43 @@
+.form {
+  background-color: #282828;
+  width: 980px;
+  height: 100px;
+  display: flex;
+  padding: 15px;
+  overflow: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+.titile {
+  font-size: 14px;
+  color: #dcdcdc;
+  cursor: text;
+}
+
+.episodes {
+  margin-left: 15px;
+  color: #fff;
+  font-size: 13px;
+  background-color: #464545;
+  width: 65px;
+  max-height: 30px;
+  border-radius: 3px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.episodes:hover {
+  background-color: #ff9601;
+}
+
+@media screen and (max-width: 450px) {
+  .form {
+    width: 400px;
+    height: 100px;
+    margin-top: 300px;
+  }
+}/*# sourceMappingURL=Episodes.module.css.map */

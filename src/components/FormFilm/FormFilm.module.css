@@ -1,0 +1,8 @@
+.formFilm {
+  height: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}/*# sourceMappingURL=FormFilm.module.css.map */

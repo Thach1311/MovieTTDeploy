@@ -1,0 +1,27 @@
+.MovieSearchForm {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.Item_form{
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.item {
+    // margin-left: 30px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

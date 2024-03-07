@@ -1,0 +1,126 @@
+.Movie {
+  height: 100%;
+  width: 100%;
+  padding: 6% 1% 3% 1%;
+}
+
+.headMovie {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ff8a00;
+  margin: 0 0 20px 0;
+}
+
+.listMovie {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.MovieForm {
+  width: 280px;
+  height: 190px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.MovieForm .Movie_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.MovieForm .Movie_img .imgForm {
+  position: absolute;
+}
+.MovieForm .Movie_img .btn_play {
+  color: #e2761d;
+  font-size: 60px;
+  position: absolute;
+  display: none;
+  scale: 1.2;
+}
+.MovieForm:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.MovieForm:hover .Movie_img img {
+  opacity: 0.7;
+}
+.MovieForm:hover .btn_play {
+  display: block;
+  transition: all 1s linear;
+  animation: animationPlay 0.5s linear;
+}
+
+.Movie_name {
+  margin-left: 5px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 40px;
+}
+
+.pageListMovie {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.pageListMovie div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animationPlay {
+  0% {
+    opacity: 0.8;
+    scale: 1;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.2;
+  }
+}
+@media screen and (max-width: 800px) {
+  .MovieForm {
+    width: 122px;
+    height: 80px;
+  }
+  .Movie_name {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .MovieForm {
+    width: 135px;
+    height: 150px;
+    margin: 10px;
+  }
+  .Movie_name {
+    font-size: 10px;
+  }
+  .listMovie {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Movie_img img {
+    height: 125px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .pageListMovie div {
+    width: 20px;
+    height: 15px;
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=ListMovie.module.css.map */

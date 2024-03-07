@@ -1,8 +1,8 @@
 {
-    "homepage": "https://Thach1311.github.io/MovieTTDeploy",
     "name": "moviett",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://Thach1311.git.io/MovieTTDeploy/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
@@ -21,8 +21,8 @@
     },
     "scripts": {
         "start": "react-app-rewired start",
-        "predeploy":"npm run build",
-        "deploy":"gh-pages -d build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
         "eject": "react-app-rewired eject"

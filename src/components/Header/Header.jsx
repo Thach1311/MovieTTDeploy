@@ -7,13 +7,25 @@ import { useState, createContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { FaFilm } from 'react-icons/fa';
 import { useMovieContext } from '../Middle/MovieProvider';
+import ListMovieSearch from '../ListMovieSearch/ListMovieSearch';
 const cx = classNames.bind(style);
 export const ShowTheme = createContext();
 
 function Header() {
     const [isShow, setIsShow] = useState(false);
     const { setSelectedTheme } = useMovieContext();
+    const [keySearch, setKeySearch] = useState('');
 
+    const handleKeySearch = (value) => {
+        let modifiedValue = value.replace(/\s+/g, '-');
+
+        // Chuyển đổi thành chữ thường và loại bỏ dấu
+        modifiedValue = modifiedValue
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '');
+        setKeySearch(modifiedValue);
+    };
     return (
         <ShowTheme.Provider value={isShow}>
             <div className={cx('header')}>
@@ -22,7 +34,15 @@ function Header() {
                     TTPhim
                 </Link>
                 <div className={cx('search')}>
-                    <input type="text" name="" id="" className={cx('search_input')} placeholder="Search"></input>
+                    <input
+                        onChange={(e) => handleKeySearch(e.target.value)}
+                        type="text"
+                        name=""
+                        id=""
+                        className={cx('search_input')}
+                        placeholder="Search"
+                    ></input>
+                    {keySearch ? <ListMovieSearch value={keySearch} /> : ''}
                     <CiSearch className={cx('search_icon')} />
                 </div>
                 <IoMoonSharp
