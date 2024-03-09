@@ -29,7 +29,7 @@ function ListMovieSearch(props) {
         <>
             <div className={cx('MovieSearchForm')}>
                 <div className={cx('Item_form')}>
-                    <Link to={`${props.value}`} onClick={() => props.value.value.setPathSlug(props.value)}>
+                    <Link to={`/${props.value}`} onClick={() => props.value.value.setPathSlug(props.value)}>
                         <div className={cx('item')}>
                             <div className="image">
                                 <img src={data.poster_url} alt="Không tìm thấy" />
@@ -37,8 +37,8 @@ function ListMovieSearch(props) {
                             <div className="name">{data.name}</div>
                         </div>
                     </Link>
+                    <Outlet></Outlet>
                 </div>
-                <Outlet></Outlet>
             </div>
         </>
     );

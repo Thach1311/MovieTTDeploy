@@ -8,8 +8,11 @@ const cx = classNames.bind(styles);
 function FormFilm(props) {
     const { selectedTheme } = useMovieContext();
     return (
-        <div className={cx('formFilm')} style={selectedTheme ? {backgroundColor:'white'}: {backgroundColor:'#1a1a1a'}}>
-            <Banner value={props}/>
+        <div
+            className={cx('formFilm')}
+            style={selectedTheme ? { backgroundColor: '#1a1a1a' } : { backgroundColor: '#fff' }}
+        >
+            <Banner value={props} />
             <Episodes />
             <DescriptionFilm />
         </div>

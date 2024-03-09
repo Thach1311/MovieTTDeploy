@@ -7,13 +7,12 @@
     z-index: 200;
     background-color: rgba(0, 0, 0, 0.9);
 }
-.Item_form{
+.Item_form {
     align-items: center;
     gap: 15px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .item {
@@ -24,4 +23,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .MovieSearchForm {
+        margin-top: 1px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .MovieSearchForm {
+        margin-top: -25px;
+    }
 }

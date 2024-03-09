@@ -55,8 +55,12 @@ function DescriptionFilm() {
                             <span className={cx('text-white font-[500] text-[13px]')}>Thể loại: </span>
                             <span className={cx('text-[13px] text-[#828282] hover:text-[#ff6901]')}>
                                 {movieData.category &&
-                                    movieData.category.map((cate,index) => {
-                                        return <span key={index} id={cate.id}>{cate.name}, </span>;
+                                    movieData.category.map((cate, index) => {
+                                        return (
+                                            <span key={index} id={cate.id}>
+                                                {cate.name},{' '}
+                                            </span>
+                                        );
                                     })}
                             </span>
                         </div>

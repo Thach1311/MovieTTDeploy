@@ -11,7 +11,7 @@ function App() {
         <BrowserRouter>
             <MovieProvider>
                 <Routes>
-                    <Route path="" element={<Home value={{ pathSlug, setPathSlug }} />} />
+                    <Route path="/*" element={<Home value={{ pathSlug, setPathSlug }} />} />
                     <Route path={`/${pathSlug}`} element={<Movie value={{ pathSlug, setPathSlug }} />}></Route>
                 </Routes>
             </MovieProvider>
