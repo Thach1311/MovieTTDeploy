@@ -85,8 +85,9 @@ function Banner(props) {
                                     )}
                                 >
                                     <FaYoutube className={cx('mr-[3px] text-[12px]')} />
+
                                     <Link target="_blank" to={movieData.trailer_url}>
-                                        {' '}
+                                        
                                         Trailer
                                     </Link>
                                 </button>
